@@ -1,0 +1,150 @@
+.reservationPage{
+    margin: 32px 300px;
+    h2{
+        margin-bottom: 24px;
+    }
+    
+    .purple-bold{
+        color: #625df5;     
+        font-weight: 700;
+    }
+   
+    .info{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        p{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .coordonnes{
+            display: flex;
+            gap: 24px;
+            p{
+                display: flex;
+                align-items: center;    
+            }
+        }
+    }
+
+    .prestation-container{
+        background-color: white;
+        box-shadow: 0 4px 8px -2px rgba(26, 27, 31, 0.08);
+        border-radius: 12px;
+        padding: 16px;
+        .top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            .back{
+                color: #625df5;
+                cursor: pointer;
+                &:hover{
+                    color: #1f1ab9;
+                }
+            }
+
+            .information{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                h3{
+                    font-weight: 400;
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                gap: 16px;
+            }
+            label{
+                border: 1px solid #eef0f2;
+                padding: 8px 16px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                border-radius:8px;
+                &:hover{
+                    background-color: #f5f6f8;
+                }
+                .selection{
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    
+    .first-step,.second-step,.third-step{
+        margin-top: 40px;
+    }
+
+    .hourly-container{
+        background-color: white;
+        box-shadow: 0 4px 8px -2px rgba(26, 27, 31, 0.08);
+        border-radius: 12px;
+        padding: 16px;
+        overflow-x: scroll;
+        .planning-container{
+            display: flex;
+            gap: 40px;
+            .day-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                .hour{
+                    width:100%;
+                    display: flex;
+                    justify-content:center;
+                    padding: 8px;
+                    background-color:#eef0f2;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    border: none;
+                    font-size: 16px;
+                    &:hover{
+                        background-color: #101010;
+                        color: white;
+                    }
+                    &.selected{
+                        background-color: #101010;
+                        color: white;
+                    }
+                }
+            }
+            .day{
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .account-container{
+        background-color: white;
+        box-shadow: 0 4px 8px -2px rgba(26, 27, 31, 0.08);
+        border-radius: 12px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        h4{
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        .btn-primary{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

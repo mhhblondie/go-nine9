@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  web:
+    image: your-go-image  # Remplacez par votre image Go, par exemple, golang:1.16
+    container_name: go-nine9-web
+    restart: always
+    ports:
+      - "8080:8080"  # Ajustez le port selon les besoins de votre application
+    volumes:
+      - ./back:/usr/src/app  # Chemin vers le code source de votre application Go
+    environment:
+      # Ajoutez les variables d'environnement nécessaires pour votre application Go
+      DB_USER: ngattaalexia
+      DB_PASSWORD: Annecandice27
+      DB_NAME: goNine
+      # Ajoutez d'autres variables d'environnement au besoin
+    depends_on:
+      - database
+
+  database:
+    image: postgres:alpine
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./migrations/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./back/pgdata:/var/lib/postgresql/data  # Chemin vers le dossier PostgreSQL data
+    environment:
+      POSTGRES_USER: ngattaalexia
+      POSTGRES_PASSWORD: Annecandice27
+      POSTGRES_DB: goNine
+      # Ajoutez d'autres variables d'environnement au besoin
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8282:8080"
+    depends_on:
+      - database
+
+volumes:
+  database:

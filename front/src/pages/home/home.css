@@ -1,0 +1,71 @@
+.homePage{
+    display: flex;
+    align-items: start;
+    .description{
+        color:#4e5860;
+    }
+    .left{
+        height: 100%;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        .intro{
+            padding: 24px;
+            width: calc(100% - 48px);
+            background-color:#e6e6e6;
+            h1{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 12px;
+            }
+        }
+        .salons{
+            width: calc(100% - 24px);
+            display: flex;
+            padding: 20px 0px 20px 24px;
+            border-bottom: 1px solid #cccccc;
+            img{
+                border-radius: 8px;
+                width: 300px;
+            }
+            .salon-info{
+                margin-left: 16px;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            p{
+                display: flex;
+                margin-bottom: 8px;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+
+        .cta-container{
+            display: flex;
+            justify-content: end;
+            align-self: end;
+            margin-right: 24px;
+            width: 40%;
+        }
+        .btn-primary {
+            margin-top: 0;
+            height: fit-content;
+        }
+    }
+    
+    .right{
+        position: sticky;
+        height: 100%;
+        top: 100px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
